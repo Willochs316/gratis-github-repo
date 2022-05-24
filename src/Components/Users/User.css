@@ -16,7 +16,7 @@
   width: 80%;
   height: 20%;
   background-color: #c1c1c1;
-  border: 0.5px solid black;
+  border: 0.5px solid #efefef;
 }
 
 .container .navbar .header {
@@ -105,7 +105,7 @@
   width: 80%;
   margin: 0 auto 0 auto;
   height: 100%;
-  border: 0.5px solid black;
+  border: 0.5px solid #efefef;
 }
 
 .container .items-container .main-container {
@@ -141,7 +141,7 @@
   justify-content: center;
   background-color: white;
   width: 100%;
-  height: 100px;
+  height: 5%;
   font-size: 16px;
   margin-left: 22px;
 }
@@ -153,7 +153,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100%;
   line-height: 25px;
 }
 
@@ -180,13 +179,20 @@
   border: 1px solid black;
 }
 
-.container .items-container .main-container .profile-repo .repo-details .rate .rate-text {
+.container .items-container .main-container .profile-repo .repo-details .rate .rate-text-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .items-container .main-container .profile-repo .repo-details .rate .rate-text-content .rate-text {
   font-size: 16px;
   margin-left: 22px;
 }
 
 .container .footer {
   width: 80%;
+  height: 10%;
 }
 
 .container .footer #review {

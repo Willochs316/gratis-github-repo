@@ -7,16 +7,30 @@ import {
   FaSearch,
   FaTimes,
 } from 'react-icons/fa';
+import { USER_PER_PAGE } from '../../../src/Utils/Constants';
 import Input from '../Commons/Input';
 import './User.css';
+import Pagination from '../../Components/Pagination/Pagination';
 
-const UserItems = ({ items, isLoading }) => {
-  console.log(items, 'my users items logged here');
+const UserItems = ({
+  items,
+  currentPage,
+  isLoading,
+  totalPages,
+  handleClick,
+}) => {
+  console.log(USER_PER_PAGE, 'my ONE users items logged here');
+
+  const startIndex = (currentPage - 1) * USER_PER_PAGE;
+  const selectedUsers = items?.items?.slice(
+    startIndex,
+    startIndex + USER_PER_PAGE
+  );
 
   return isLoading ? (
     <h1>Loading...</h1>
   ) : (
-    <div className='container'>
+    <div className='container mt-3'>
       <div className='navbar'>
         <div className='header'>
           <h1 className='h1-text'>Trending Repos</h1>
@@ -39,8 +53,8 @@ const UserItems = ({ items, isLoading }) => {
       </div>
 
       <div className='items-container'>
-        {items?.items?.map((item) => (
-          <div className='main-container'>
+        {selectedUsers.map((item) => (
+          <div className='main-container' key={item.id}>
             <div className='profile-repo'>
               <div className='repo-image'>
                 <img
@@ -84,10 +98,10 @@ const UserItems = ({ items, isLoading }) => {
                     Issues: {item.open_issues_count}k
                   </div>
 
-                  <div>
-                    <p className='rate-text'>
+                  <div className='rate-text-content'>
+                    <span className='rate-text'>
                       Submiitted 30 days ago by {item.name}
-                    </p>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -97,7 +111,7 @@ const UserItems = ({ items, isLoading }) => {
       </div>
 
       <div className='footer'>
-      <textarea id="review" name="review" rows="4" cols="50" />
+        <Pagination totalPages={totalPages} handleClick={handleClick} />
       </div>
     </div>
   );

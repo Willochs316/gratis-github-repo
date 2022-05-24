@@ -1,0 +1,14 @@
+.page-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #C1C1C1;
+  background-color: #C1C1C1;
+
+  .page-btn{
+    border: 0.5px solid;
+    padding: 5px;
+    outline: 0;
+    background-color: #ffff;
+  }
+}
