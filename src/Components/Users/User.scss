@@ -3,95 +3,50 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  flex-basis: 100%;
   height: 100%;
-  background-color: #ffffff;
 
-  .navbar {
+  .input-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 80%;
-    height: 20%;
-    background-color: #c1c1c1;
-    border: 0.5px solid #efefef;
+    justify-content: flex-start;
+    width: 980px;
+    height: 3rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    border-width: 2px;
+    padding: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
 
-    .header {
+    .em-input {
+      font-size: 16px;
+      font-weight: 300;
+      width: 900px;
+      height: 28px;
+      outline: 0;
+      border: none;
+      background: 0 0;
+      background-color: transparent;
       line-height: 25px;
-      width: 100%;
-      height: 100%;
+      color: #e5e7eb;
+      cursor: text;
+    }
+
+    .input-button {
+      outline: 0;
       text-align: center;
-      margin-top: 22px;
-
-      .h1-text {
-        font-size: 18px;
-      }
-    }
-    .nav-contents {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 24px 0;
-
-      .icons-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .fa-chevro {
-          font-size: 100%;
-          margin-left: 22px;
-        }
-      }
-    }
-
-    .input-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 75%;
-
-      .trend-input {
-        font-size: 16px;
-        font-weight: 300;
-        outline: 0;
-        border: none;
-        background: 0 0;
-        background-color: transparent;
-        line-height: 25px;
-        margin: 0;
-        color: #8e8e8e;
-        position: relative;
-        border-radius: 8px;
-        font-weight: 300;
-        font-size: 16px;
-        padding: 0 16px;
-        background-color: #efefef;
-        border: 1px solid #dbdbdb;
-        border-radius: 8px;
-        width: 100%;
-        cursor: text;
-      }
-
-      .btn-search {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        outline: 0;
-        text-align: center;
-        border: none;
-        background: 0 0;
-        padding: 5px 16px;
-        border-radius: 8px;
-        font-weight: 300;
-        line-height: 25px;
-        font-size: 16px;
-        margin-left: 22px;
-        margin-right: 22px;
-        background-color: #efefef;
-      }
+      border: none;
+      background: #2563eb;
+      padding: 0px 8px;
+      border-radius: 0.375rem;
+      width: 70px;
+      height: 2rem;
+      font-weight: 300;
+      line-height: 25px;
+      font-size: 16px;
+      padding: 0 0.5rem;
+      cursor: pointer;
     }
   }
 
@@ -100,10 +55,11 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
-    margin: 0 auto 0 auto;
+    padding: 0px 20px;
+    max-width: 960px;
+    margin: 20px auto 0 auto;
     height: 100%;
-    border: 0.5px solid #efefef;
+    border: 0 solid;
 
     .main-container {
       display: flex;
@@ -111,22 +67,36 @@
       flex-direction: column;
       justify-content: center;
       font-size: 16px;
-      width: 100%;
-      padding: 0.5rem 0.8rem;
-      background-color: #ffffff;
-      border: 0px solid black;
+      flex-basis: 100%;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.375rem;
+      border-width: 1px;
+      margin-bottom: 0.75rem;
+      padding: 0.75rem 0.5rem;
 
       .profile-repo {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        flex-basis: 100%;
 
-        .repo-image {
+        .repo-image-container {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-left: 22px;
+          list-style: none;
+          border: 0 solid;
+          padding-left: 0.75rem;
+          padding-right: 0.75rem;
+          padding-top: 0.5rem;
+
+          .repo-image {
+            width: 100px;
+            height: 100px;
+            padding: 0.75rem;
+            padding-right: 0.75rem;
+            padding-top: 0.5rem;
+          }
         }
 
         .repo-details {
@@ -134,21 +104,36 @@
           align-items: center;
           flex-direction: column;
           justify-content: center;
-          background-color: white;
-          width: 100%;
-          height: 5%;
+          width: 838px;
+          height: 104px;
           font-size: 16px;
-          margin-left: 22px;
+          flex: 1 1 auto;
+          color: #e5e7eb;
 
-          .rep-content {
+          .repo-header {
             display: flex;
+            align-items: center;
             justify-content: flex-start;
-            align-items: center;
-            flex-direction: column;
-            align-items: center;
             width: 100%;
-            // height: 100%;
-            line-height: 25px;
+            height: 28px;
+
+            .repo-1 {
+              font-size: 20px;
+              color: #e5e7eb;
+            }
+          }
+
+          .repo-text {
+            margin: 0;
+            margin-bottom: 0.5rem;
+            margin-top: 0.1rem;
+            line-height: 1.25rem;
+            width: 100%;
+            height: 20px;
+
+            .repo-p1 {
+              font-size: 14px;
+            }
           }
 
           .rate {
@@ -157,20 +142,31 @@
             align-items: center;
             justify-content: flex-start;
             width: 100%;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            border: 0;
 
             .rate-1 {
-              padding: 4px;
+              outline: none;
               font-size: 16px;
               justify-content: flex-start;
-              border: 1px solid black;
+              border: 1px solid #e5e7eb;
+              border-radius: 0.3rem;
+              padding: 0.3rem 0.75rem;
+              cursor: pointer;
             }
 
             .rate-2 {
-              padding: 4px;
+              outline: none;
               font-size: 16px;
               margin-left: 22px;
               justify-content: flex-start;
-              border: 1px solid black;
+              border: 1px solid #e5e7eb;
+              border-radius: 0.3rem;
+              padding: 0.3rem 0.75rem;
+              cursor: pointer;
             }
 
             .rate-text-content {
@@ -186,16 +182,6 @@
           }
         }
       }
-    }
-  }
-
-  .footer {
-    width: 80%;
-    height: 10%;
-    #review {
-      outline: 0;
-      width: 100%;
-      background-color: #c1c1c1;
     }
   }
 }
