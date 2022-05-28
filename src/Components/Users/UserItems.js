@@ -46,7 +46,7 @@ const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
 
                 <div className='repo-details'>
                   <div className='repo-header'>
-                    <h1 className='repo-1'>{item.full_name}</h1>
+                    <h2 className='repo-1'>{item.full_name}</h2>
                   </div>
 
                   <div className='repo-text'>
