@@ -4,6 +4,7 @@ import Button from '../Commons/Button';
 import Input from '../Commons/Input';
 import './User.css';
 import CircularProgress from '@mui/material/CircularProgress';
+import { Box } from '@mui/material';
 
 const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
   const onNext = () => {
@@ -11,7 +12,9 @@ const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
   };
 
   return isLoading ? (
-    <CircularProgress />
+    <Box className='progressBar'>
+      <CircularProgress />
+    </Box>
   ) : (
     <div className='container mt-3'>
       <div className='input-container'>
@@ -24,7 +27,11 @@ const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
           dataLength={githubResponse?.items}
           next={onNext}
           hasMore={githubResponse?.incomplete_results}
-          loader={<CircularProgress />}
+          loader={
+            <Box className='progressBar'>
+              <CircularProgress />
+            </Box>
+          }
         >
           {githubResponse?.items?.map((item) => (
             <div className='main-container' key={item.id}>
@@ -60,7 +67,7 @@ const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
 
                     <div className='rate-text-content'>
                       <span className='rate-text'>
-                        Submiitted 30 days ago by {item.name}
+                        Submitted 30 days ago by {item.name}
                       </span>
                     </div>
                   </div>
