@@ -6,11 +6,9 @@ import './User.css';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
-
   const onNext = () => {
     loadMore?.();
   };
-
 
   return isLoading ? (
     <CircularProgress />
