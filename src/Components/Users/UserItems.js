@@ -1,10 +1,9 @@
 import React from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import Button from '../Commons/Button';
-import Input from '../Commons/Input';
 import './User.css';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Box } from '@mui/material';
+import SearchBar from '../SearchBar/SearchBar';
 
 const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
   const onNext = () => {
@@ -17,10 +16,7 @@ const UserItems = ({ githubResponse, currentPage, isLoading, loadMore }) => {
     </Box>
   ) : (
     <div className='container mt-3'>
-      <div className='input-container'>
-        <Input className='em-input' placeholder='Search....' />
-        <Button className='input-button' title='Search' />
-      </div>
+      <SearchBar githubResponse={githubResponse} />
 
       <div className='items-container'>
         <InfiniteScroll
